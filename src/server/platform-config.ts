@@ -7,6 +7,8 @@ export interface PlatformConfig extends WebConfig {
   model?: string;
   apiKey?: string;
   baseUrl: string;
+  /** Some OpenAI reasoning models require "none" for function tools on chat completions. */
+  reasoningEffort?: string;
   computerSupervisorUrl?: string;
   computerSupervisorToken?: string;
   computerToken?: string;

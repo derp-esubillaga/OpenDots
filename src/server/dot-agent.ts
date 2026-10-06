@@ -298,7 +298,12 @@ export class DotAgent extends AbstractAgent {
               abortController: ctx.abortController,
               threadId: ctx.input.threadId,
               runId: ctx.input.runId,
-              modelOptions: { max_completion_tokens: 2200 },
+              modelOptions: {
+                max_completion_tokens: 2200,
+                ...(this.config.reasoningEffort
+                  ? { reasoning_effort: this.config.reasoningEffort }
+                  : {}),
+              },
               agentLoopStrategy: maxIterations(
                 dot.skillDeliveryEnabled && conversation.learningContainerId
                   ? 10
