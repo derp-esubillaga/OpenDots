@@ -1,0 +1,27 @@
+/* Dark palette for the document editor: sage-tinted to match its light tint. */
+:root {
+  --dk-doc-page: #1a1d1b;
+  --dk-doc-surface-2: #1f2320;
+  --dk-doc-surface-3: #242925;
+  --dk-doc-raised: #232825;
+  --dk-doc-chip: #2a302b;
+  --dk-doc-chip-strong: #323833;
+  --dk-doc-line: #2d332f;
+  --dk-doc-line-strong: #3f4741;
+  --dk-doc-line-bold: #5b645d;
+  --dk-doc-ink-strong: #f0f3ef;
+  --dk-doc-ink: #e3e7e3;
+  --dk-doc-muted: #a3aca5;
+  --dk-doc-muted-light: #8a948c;
+  --dk-doc-muted-faint: #727b74;
+  --dk-doc-accent: #cfe3d2;
+  --dk-doc-accent-ink: #13201a;
+  --dk-doc-link: #8fcbb0;
+  --dk-doc-link-fill: #2f5a46;
+  --dk-doc-link-soft: #1c2b24;
+  --dk-doc-link-line: #2f4a3c;
+  --dk-doc-selection: #6fb3a633;
+  --document-ink: light-dark(#282b2a, var(--dk-doc-ink));
+  --document-muted: light-dark(#646a67, var(--dk-doc-muted));
+  --document-line: light-dark(#e7e9e7, var(--dk-doc-line));
+}

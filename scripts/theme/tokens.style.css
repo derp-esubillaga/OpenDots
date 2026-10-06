@@ -1,0 +1,65 @@
+/*
+ * Theme switch: colours are written as light-dark(<light>, var(--dk-*)).
+ * color-scheme picks the side. JS sets data-theme only for a manual override;
+ * with no attribute the OS preference applies.
+ */
+:root {
+  color-scheme: light;
+  --dk-page: #1a1b20;
+  --dk-surface-2: #1f2026;
+  --dk-surface-3: #24252b;
+  --dk-chip: #2a2b32;
+  --dk-chip-strong: #32333b;
+  --dk-raised: #25262c;
+  --dk-line: #2c2d34;
+  --dk-line-strong: #3f4048;
+  --dk-line-bold: #5c5d66;
+  --dk-ink-strong: #f3f3f6;
+  --dk-ink: #e6e6e9;
+  --dk-muted: #a3a4ac;
+  --dk-muted-light: #8e8f98;
+  --dk-muted-faint: #74757e;
+  --dk-accent: #e4e4e8;
+  --dk-accent-ink: #1a1b20;
+  --dk-on-fill: #ffffff;
+  --dk-brand: #6fb3a6;
+  --dk-brand-fill: #2f6a62;
+  --dk-brand-soft: #1b2d2a;
+  --dk-brand-line: #2c4a44;
+  --dk-success: #8fbf96;
+  --dk-success-fill: #3d6b45;
+  --dk-success-soft: #1c2a1e;
+  --dk-success-line: #2f4532;
+  --dk-info: #9dade6;
+  --dk-info-fill: #4a5aa0;
+  --dk-info-soft: #1f2338;
+  --dk-info-line: #343c62;
+  --dk-danger: #e68a80;
+  --dk-danger-fill: #9c3c33;
+  --dk-danger-soft: #2f1f1d;
+  --dk-danger-line: #4a302c;
+  --dk-warning: #d8ba86;
+  --dk-warning-fill: #7a6233;
+  --dk-warning-soft: #2b261c;
+  --dk-warning-line: #463b27;
+  --dk-scrim: #00000099;
+  --dk-overlay-light: #ffffff14;
+  --dk-screen-frame: #2a2b32;
+  /* Upstream's shared variables, resolved per theme. */
+  --ink: light-dark(#242424, var(--dk-ink));
+  --muted: light-dark(#707070, var(--dk-muted));
+  --line: light-dark(#e7e7e7, var(--dk-line));
+  --blue: light-dark(#282828, var(--dk-accent));
+  --blue-dark: light-dark(#111, #ffffff);
+  --lavender: light-dark(#f1f1f1, var(--dk-chip));
+  /* Referenced upstream but never defined. */
+  --border: var(--line);
+}
+:root[data-theme='dark'] {
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    color-scheme: dark;
+  }
+}
