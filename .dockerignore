@@ -10,3 +10,5 @@ RESEARCH.md
 docs
 *.sqlite*
 *.db*
+.claude
+.temp
