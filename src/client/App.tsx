@@ -39,6 +39,7 @@ import { ResultPane } from './ResultPane';
 import { TaskRow } from './TaskPresentation';
 import { TaskActions } from './TaskActions';
 import { WorkspaceDialog, type Dialog } from './WorkspaceDialog';
+import { ThemeButton } from './ThemeButton';
 
 export function App() {
   const [state, setState] = useState<State>();
@@ -299,6 +300,7 @@ export function App() {
         >
           <Settings2 size={18} />
         </button>
+        <ThemeButton variant="rail" />
       </nav>
       <button
         className="mobile-menu icon-button"
@@ -446,6 +448,7 @@ export function App() {
             <span>Memories</span>
             <small>{state.memories.length}</small>
           </button>
+          <ThemeButton variant="nav" />
           <button
             className="nav-item"
             onClick={() => setDialog({ type: 'settings' })}
